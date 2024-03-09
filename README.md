@@ -1,5 +1,4 @@
-# PCB Christmass Tree
-
+# PCB Christmas Tree
 
 ## Designed by
 Krzysztof Sikora
