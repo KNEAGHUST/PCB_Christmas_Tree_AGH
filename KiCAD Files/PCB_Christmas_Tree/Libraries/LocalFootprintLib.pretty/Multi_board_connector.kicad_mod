@@ -21,6 +21,4 @@
     (thermal_bridge_angle 45) (tstamp a964d1a3-4f54-4fa4-b770-1866dbb17a67))
   (pad "4" smd rect (at 2.286 0.254 270) (size 3 2) (layers "F.Cu" "F.Paste" "F.Mask")
     (thermal_bridge_angle 45) (tstamp 6a1d05e7-a94b-402d-85e9-754e318165fa))
-  (pad "5" smd rect (at 4.572 0.254 270) (size 3 2) (layers "F.Cu" "F.Paste" "F.Mask")
-    (thermal_bridge_angle 45) (tstamp 00328612-f276-4112-a1ba-5afeda78fff6))
 )
