@@ -563,65 +563,92 @@
         )
       )
     )
-    (symbol "Simulation_SPICE:NPN" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at -2.54 7.62 0)
+    (symbol "Switch:SW_Omron_B3FS" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "SW" (at 1.27 2.54 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "SW_Omron_B3FS" (at 0 -1.524 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "NPN" (at -2.54 5.08 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 63.5 0 0)
+      (property "Footprint" "" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "~" (at 63.5 0 0)
+      (property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf" (at 0 5.08 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Device" "NPN" (at 0 0 0)
+      (property "ki_keywords" "switch normally-open pushbutton push-button" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Type" "GUMMELPOON" (at 0 0 0)
+      (property "ki_description" "Omron B3FS 6x6mm single pole normally-open tactile switch" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Pins" "1=C 2=B 3=E" (at 0 0 0)
+      (property "ki_fp_filters" "SW*Omron*B3FS*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_keywords" "simulation" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Bipolar transistor symbol for simulation only, substrate tied to the emitter" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "NPN_0_1"
-        (polyline
-          (pts
-            (xy -2.54 0)
-            (xy 0.635 0)
-          )
-          (stroke (width 0.1524) (type default))
+      (symbol "SW_Omron_B3FS_0_1"
+        (circle (center -2.032 0) (radius 0.508)
+          (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy 0.635 0.635)
-            (xy 2.54 2.54)
+            (xy 0 1.27)
+            (xy 0 3.048)
           )
           (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
           (pts
-            (xy 2.794 -1.27)
-            (xy 2.794 -1.27)
+            (xy 2.54 1.27)
+            (xy -2.54 1.27)
           )
-          (stroke (width 0.1524) (type default))
+          (stroke (width 0) (type default))
           (fill (type none))
         )
+        (circle (center 2.032 0) (radius 0.508)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (pin passive line (at -5.08 0 0) (length 2.54)
+          (name "1" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 0 180) (length 2.54)
+          (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Transistor_BJT:BC817" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "Q" (at 5.08 1.905 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Value" "BC817" (at 5.08 0 0)
+        (effects (font (size 1.27 1.27)) (justify left))
+      )
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
+        (effects (font (size 1.27 1.27) italic) (justify left) hide)
+      )
+      (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide)
+      )
+      (property "ki_keywords" "NPN Transistor" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "0.8A Ic, 45V Vce, NPN Transistor, SOT-23" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "BC817_0_1"
         (polyline
           (pts
-            (xy 2.794 -1.27)
-            (xy 2.794 -1.27)
+            (xy 0.635 0.635)
+            (xy 2.54 2.54)
           )
-          (stroke (width 0.1524) (type default))
+          (stroke (width 0) (type default))
           (fill (type none))
         )
         (polyline
@@ -658,50 +685,44 @@
           (fill (type none))
         )
       )
-      (symbol "NPN_1_1"
-        (pin open_collector line (at 2.54 5.08 270) (length 2.54)
-          (name "C" (effects (font (size 1.27 1.27))))
+      (symbol "BC817_1_1"
+        (pin input line (at -5.08 0 0) (length 5.715)
+          (name "B" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin input line (at -5.08 0 0) (length 2.54)
-          (name "B" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 2.54 -5.08 90) (length 2.54)
+          (name "E" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin open_emitter line (at 2.54 -5.08 90) (length 2.54)
-          (name "E" (effects (font (size 1.27 1.27))))
+        (pin passive line (at 2.54 5.08 270) (length 2.54)
+          (name "C" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
       )
     )
-    (symbol "Simulation_SPICE:PMOS" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "Q" (at 5.08 1.27 0)
+    (symbol "Transistor_FET:AO3401A" (pin_names hide) (in_bom yes) (on_board yes)
+      (property "Reference" "Q" (at 5.08 1.905 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Value" "PMOS" (at 5.08 -1.27 0)
+      (property "Value" "AO3401A" (at 5.08 0 0)
         (effects (font (size 1.27 1.27)) (justify left))
       )
-      (property "Footprint" "" (at 5.08 2.54 0)
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 5.08 -1.905 0)
+        (effects (font (size 1.27 1.27) italic) (justify left) hide)
+      )
+      (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) (justify left) hide)
+      )
+      (property "ki_keywords" "P-Channel MOSFET" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf" (at 0 -12.7 0)
+      (property "ki_description" "-4.0A Id, -30V Vds, P-Channel MOSFET, SOT-23" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Device" "PMOS" (at 0 -17.145 0)
+      (property "ki_fp_filters" "SOT?23*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Sim.Type" "VDMOS" (at 0 -19.05 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Sim.Pins" "1=D 2=G 3=S" (at 0 -15.24 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "transistor PMOS P-MOS P-MOSFET simulation" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "P-MOSFET transistor, drain/source/gate" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "PMOS_0_1"
+      (symbol "AO3401A_0_1"
         (polyline
           (pts
             (xy 0.254 0)
@@ -812,75 +833,18 @@
           (fill (type outline))
         )
       )
-      (symbol "PMOS_1_1"
-        (pin passive line (at 2.54 5.08 270) (length 2.54)
-          (name "D" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
+      (symbol "AO3401A_1_1"
         (pin input line (at -5.08 0 0) (length 2.54)
           (name "G" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
         )
         (pin passive line (at 2.54 -5.08 90) (length 2.54)
           (name "S" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Switch:SW_Omron_B3FS" (pin_numbers hide) (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "SW" (at 1.27 2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "SW_Omron_B3FS" (at 0 -1.524 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 5.08 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf" (at 0 5.08 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "switch normally-open pushbutton push-button" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Omron B3FS 6x6mm single pole normally-open tactile switch" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "SW*Omron*B3FS*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "SW_Omron_B3FS_0_1"
-        (circle (center -2.032 0) (radius 0.508)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 0 1.27)
-            (xy 0 3.048)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy 2.54 1.27)
-            (xy -2.54 1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (circle (center 2.032 0) (radius 0.508)
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-        (pin passive line (at -5.08 0 0) (length 2.54)
-          (name "1" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 5.08 0 180) (length 2.54)
-          (name "2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 2.54 5.08 270) (length 2.54)
+          (name "D" (effects (font (size 1.27 1.27))))
+          (number "3" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1489,11 +1453,6 @@
     (effects (font (size 5.12 5.12)) (justify left bottom))
     (uuid 4e433eb8-81de-474c-a18f-6f89827f5b13)
   )
-  (text "NOTES:\n- check if the attiny has internal pullup for switch input\n- check the led currents\n"
-    (at 219.075 176.53 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 50f70463-1527-47d0-bb71-f44be4bae55c)
-  )
   (text "Board connector\n" (at 231.775 20.955 0)
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid 6666967f-f4d0-4d3f-83ba-e1cdcc16eef9)
@@ -1554,6 +1513,10 @@
   (label "UDPI" (at 201.295 39.37 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 42e06cd8-f1d1-48ff-9f2e-eb030094aafe)
+  )
+  (label "LED_Set_3" (at 146.05 44.45 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 47af67a6-8726-4698-92e6-253eeda8e838)
   )
   (label "LED_Power_2" (at 227.33 87.63 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1623,10 +1586,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 93f9dfd2-7f88-42c0-b3bd-7a5f13e4e6bb)
   )
-  (label "LED_Set_3" (at 146.05 52.07 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 95aea018-0080-4b62-8668-b96b68553588)
-  )
   (label "LED_Power_3" (at 177.8 133.985 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a6573dc9-1c89-41ff-be80-bf036c15f5db)
@@ -1654,6 +1613,10 @@
   (label "LED_Power_1" (at 233.68 30.48 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b658f5de-17a0-4ddc-8872-aab3345106b6)
+  )
+  (label "Power_sustain" (at 146.05 52.07 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid c0015327-211f-4bcd-8f10-e22483371d6f)
   )
   (label "LED_Power_1" (at 234.95 48.895 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1695,10 +1658,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e3935ea7-939f-4fc8-b957-a36ef4a8a084)
   )
-  (label "Power_sustain" (at 146.05 44.45 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid e7b09dee-63cb-4a51-a0d8-b3ddb8cf70b0)
-  )
   (label "LED_Power_3" (at 154.305 133.985 90) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e7d08946-5ec9-4219-a4b6-3755ae8e0944)
@@ -1720,42 +1679,6 @@
     (uuid fd5997d4-959c-4986-9df9-9f1b24c858e8)
   )
 
-  (symbol (lib_id "Simulation_SPICE:PMOS") (at 53.975 169.545 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 067e59c1-77cf-44dd-814a-1566e99da865)
-    (property "Reference" "Q2" (at 59.69 170.815 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "PMOS" (at 59.69 168.275 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (at 59.055 172.085 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf" (at 53.975 156.845 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "PMOS" (at 53.975 152.4 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Type" "VDMOS" (at 53.975 150.495 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=D 2=G 3=S" (at 53.975 154.305 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 739af556-cf2c-4b55-bd4d-15bb72b369be))
-    (pin "2" (uuid a97f7b57-a011-44ae-a0d7-1f23ee83dc4b))
-    (pin "3" (uuid aa7a3197-1ee7-470b-9e74-047e435f0c71))
-    (instances
-      (project "PCB_Christmas_Tree"
-        (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
-          (reference "Q2") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "power:VDD") (at 124.46 34.29 0) (unit 1)
     (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
     (uuid 13df9474-96c8-4c88-803f-9c84c0856642)
@@ -1771,7 +1694,7 @@
     (property "Datasheet" "" (at 124.46 34.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 508aafe0-2de6-47f4-b39c-c2e463ebc899))
+    (pin "1" (uuid b690a055-5578-4ecb-9daf-5f69c8e4201c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1796,8 +1719,8 @@
     (property "Datasheet" "~" (at 227.33 139.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 79d00681-fad0-4cef-8cfe-03b631986c0d))
-    (pin "2" (uuid a5d96a04-a616-4f9b-976a-f3eebc3a831c))
+    (pin "1" (uuid e96083ee-06f1-47a8-a8f0-8269501864f0))
+    (pin "2" (uuid 379213c3-a87d-471a-873c-409816f1fa11))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1822,7 +1745,7 @@
     (property "Datasheet" "" (at 177.8 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 68ad8314-9e87-4918-9a73-e7a91e2cbb1c))
+    (pin "1" (uuid 069c3ac1-2cf0-41e9-8d20-fd6e10e97e80))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1847,8 +1770,8 @@
     (property "Datasheet" "~" (at 236.855 139.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f8d98747-c8f7-478d-977c-94aab4984315))
-    (pin "2" (uuid 099762ab-9983-47ec-b3b9-0b510b14bda3))
+    (pin "1" (uuid 728a906b-e08b-4448-9a8a-ab9f7f116bf9))
+    (pin "2" (uuid ab19f605-6261-4690-9532-ef81968832d6))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1873,9 +1796,9 @@
     (property "Datasheet" "~" (at 67.31 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 58f19693-87dd-42f9-b47b-fb2a079bd545))
-    (pin "2" (uuid 8af0b1f1-84c5-4955-8fca-911a33a4f571))
-    (pin "3" (uuid f3eb4573-2fe5-4a6f-ba7d-6b2556c13b2a))
+    (pin "1" (uuid 23290cd3-7436-45e2-9a89-e692d5a6402f))
+    (pin "2" (uuid 1d490795-ec04-48f4-80b9-325f1cab8e59))
+    (pin "3" (uuid 29cb233b-f2dc-49eb-b6d9-f50efb3db851))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1900,7 +1823,7 @@
     (property "Datasheet" "" (at 187.96 111.125 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 385d6ec6-b5d2-4344-b57a-e38fc1bbb668))
+    (pin "1" (uuid ab7a6ed7-0c23-40f2-b8df-51cfd74deb4f))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1925,8 +1848,8 @@
     (property "Datasheet" "~" (at 187.96 95.885 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8fb0d930-7b89-484a-97e5-b5d5f1f39be7))
-    (pin "2" (uuid 0620570f-9d60-4f4f-9ac4-0e0dfe83b52d))
+    (pin "1" (uuid 0c0112cb-8646-46c4-90e0-47adfed06dbb))
+    (pin "2" (uuid cd1fcd91-296a-43d5-8abb-e5d69a70e752))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -1951,12 +1874,39 @@
     (property "Datasheet" "~" (at 166.37 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b84a27cf-4577-4197-9fd1-0e631d0a7b8e))
-    (pin "2" (uuid cb4c1618-89d9-420a-a05a-5cdea2d0fb19))
+    (pin "1" (uuid 6914fd63-3b68-42cb-995a-e0928c5099d3))
+    (pin "2" (uuid 65494a64-c554-47c7-aeb6-c0af14374b02))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
           (reference "D5") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_BJT:BC817") (at 55.88 81.28 0) (mirror y) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 1f43405a-e269-41d1-8a2c-a0d4e8274a37)
+    (property "Reference" "Q4" (at 50.165 80.01 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "BC817" (at 50.165 82.55 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 50.8 83.185 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "https://www.onsemi.com/pub/Collateral/BC818-D.pdf" (at 55.88 81.28 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (pin "1" (uuid ecb6b74f-28ac-467d-bc55-952bd7ed45bd))
+    (pin "2" (uuid bdb02a52-a58c-4861-a217-9a700f050cb6))
+    (pin "3" (uuid fb219998-3f0d-4175-b13f-c465bc15f04f))
+    (instances
+      (project "PCB_Christmas_Tree"
+        (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
+          (reference "Q4") (unit 1)
         )
       )
     )
@@ -1977,8 +1927,8 @@
     (property "Datasheet" "~" (at 206.375 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 50329d5d-11ba-4d36-b68a-58eab31de077))
-    (pin "2" (uuid e605c067-d364-4086-9665-7d1adf809554))
+    (pin "1" (uuid 59e6f8d4-5a37-4f62-b2df-7202e707e625))
+    (pin "2" (uuid 77402503-7b6b-43a7-b5fe-9401a196211c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2003,7 +1953,7 @@
     (property "Datasheet" "" (at 144.145 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9275e97f-3c04-43a2-8578-e80e46aa4c57))
+    (pin "1" (uuid af220349-1b98-49ad-9f62-ccfdbbbed91d))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2028,7 +1978,7 @@
     (property "Datasheet" "" (at 96.52 124.46 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a2b94bcd-6c05-43f7-9ae7-eac950a250d3))
+    (pin "1" (uuid b5fb97a7-2ac4-474a-85d1-013d9b315eaf))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2053,8 +2003,8 @@
     (property "Datasheet" "~" (at 236.855 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 365a97fc-528a-40b9-80a1-d9599a3a79f6))
-    (pin "2" (uuid 071497f6-a34b-4519-93f7-c8d94a1d6bbe))
+    (pin "1" (uuid faa9972c-792e-49a9-a935-f47b120d1322))
+    (pin "2" (uuid 5b7436d3-c153-4028-a6c6-4ec80e46d84b))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2079,7 +2029,7 @@
     (property "Datasheet" "" (at 67.31 68.58 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4b522005-521b-485c-9b2d-6d87af53eefd))
+    (pin "1" (uuid 9cc3b28c-6f78-4a4d-8778-8092fd0edd1b))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2104,10 +2054,10 @@
     (property "Datasheet" "~" (at 255.905 52.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0b267d9e-ea78-4ecf-8ffa-47e9a36b2aa8))
-    (pin "2" (uuid d34c4204-c7b0-4e81-94bc-69e487c06411))
-    (pin "3" (uuid 9ff7bedf-9eee-4208-8843-8c3630cec580))
-    (pin "4" (uuid 71c778bf-3595-4a66-ac0e-72b4e9682813))
+    (pin "1" (uuid 78679acc-7347-4d3e-8ac1-edb6b2f235c8))
+    (pin "2" (uuid 219e30d0-6a89-497d-8333-c241c1ae3d24))
+    (pin "3" (uuid d606f9e3-e819-4a47-b412-a850653228ed))
+    (pin "4" (uuid 78d56467-b511-4fad-a105-dfd6c62a6582))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2117,37 +2067,28 @@
     )
   )
 
-  (symbol (lib_id "Simulation_SPICE:PMOS") (at 54.61 133.35 0) (mirror x) (unit 1)
+  (symbol (lib_id "Transistor_FET:AO3401A") (at 53.975 169.545 0) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
-    (uuid 2b00f0d9-71fd-4db9-a30a-22abf167b67f)
-    (property "Reference" "Q3" (at 60.325 134.62 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 2ab98b50-b06f-461e-987f-3a3a7b66bcfe)
+    (property "Reference" "Q2" (at 62.865 169.545 90)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "PMOS" (at 60.325 132.08 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+    (property "Value" "AO3401A" (at 60.325 169.545 90)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (at 59.69 135.89 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 59.055 167.64 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
-    (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf" (at 54.61 120.65 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 53.975 169.545 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Sim.Device" "PMOS" (at 54.61 116.205 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Type" "VDMOS" (at 54.61 114.3 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=D 2=G 3=S" (at 54.61 118.11 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 61f8e272-f799-49d9-97b2-ef80f78e4845))
-    (pin "2" (uuid 83779414-3699-4a58-8ee4-8f202687b306))
-    (pin "3" (uuid b5851acf-8950-4c06-827b-3d1c7bb94614))
+    (pin "1" (uuid c2c2026f-7c87-4089-a254-12635672be7e))
+    (pin "2" (uuid bc79de4c-fb28-4db3-bd0d-85a3a1d98297))
+    (pin "3" (uuid 64d95d4d-1b94-46be-b16f-f50adf444d82))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
-          (reference "Q3") (unit 1)
+          (reference "Q2") (unit 1)
         )
       )
     )
@@ -2168,8 +2109,8 @@
     (property "Datasheet" "~" (at 256.54 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cedec676-6a9f-4106-9ba4-5d5a9dfc87c0))
-    (pin "2" (uuid 1931ff14-d786-40a9-895e-2177ae67f68e))
+    (pin "1" (uuid d5fc7864-0794-404d-9dbe-0a533e94a029))
+    (pin "2" (uuid ba50a9ca-11f5-4a71-a09f-cac2d84a2bf2))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2194,8 +2135,8 @@
     (property "Datasheet" "~" (at 217.17 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 91abd9b6-b526-4bc3-8dd2-e5757cab199e))
-    (pin "2" (uuid 6cfadd87-13f0-412c-9875-7d7519d0002a))
+    (pin "1" (uuid 4ac903f4-4a62-4db0-81d8-03e8a183e5be))
+    (pin "2" (uuid 1e85db63-e2f6-49fe-9e67-37912abc39fb))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2220,7 +2161,7 @@
     (property "Datasheet" "" (at 217.17 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dbcb42d4-915d-42c7-926f-c71db6a84876))
+    (pin "1" (uuid 0d0e709a-5138-4646-a4db-d4bf127f3d92))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2245,7 +2186,7 @@
     (property "Datasheet" "" (at 236.855 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 274e0607-6e79-4a86-ba9c-dc3f8bbbcc0b))
+    (pin "1" (uuid 0f83d412-66fa-43d0-b925-e4f1349ec32c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2270,7 +2211,7 @@
     (property "Datasheet" "" (at 144.78 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b22237c1-3832-4c0e-8548-ca49b415c47f))
+    (pin "1" (uuid 24a168d5-3e52-4b67-a5a6-ab0c83e8a495))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2295,8 +2236,8 @@
     (property "Datasheet" "~" (at 177.8 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4a8aa7a4-389a-462e-a2d5-a57afa81915f))
-    (pin "2" (uuid 39982f74-7da0-4f56-81c6-2a7f2ff20883))
+    (pin "1" (uuid 57801874-ad37-4e1f-80f5-103f4e99ccff))
+    (pin "2" (uuid 7c7a734a-3ea6-4445-b4c7-f15d712f95f4))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2321,8 +2262,8 @@
     (property "Datasheet" "~" (at 256.54 139.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 48a31d71-cdd9-4177-9e1f-5d88adc8d97a))
-    (pin "2" (uuid 1235cc16-1950-4de9-ad10-3fc958697aec))
+    (pin "1" (uuid 2bd305ab-c142-42e5-ac4d-f77e55c6dd9a))
+    (pin "2" (uuid 3612f906-144b-495a-ab27-224c901ff819))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2347,7 +2288,7 @@
     (property "Datasheet" "" (at 154.305 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid eac93e48-d9b1-4100-8e26-f83148d038ee))
+    (pin "1" (uuid f1d3c852-f042-490a-ba72-55ae64902014))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2372,8 +2313,8 @@
     (property "Datasheet" "~" (at 187.96 140.335 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9aaa065c-741b-40ec-9faa-945d3d5a5ab1))
-    (pin "2" (uuid dd341959-b27e-4b2f-9e9d-f0820780dc37))
+    (pin "1" (uuid 0c03736a-e5b7-42ea-93b5-6d752ca2f447))
+    (pin "2" (uuid 47acf8fb-7f2f-4264-938a-d46960a86b0d))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2398,7 +2339,7 @@
     (property "Datasheet" "" (at 57.15 125.095 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f0b9c8f8-f8df-4d54-b61e-0358040d1f94))
+    (pin "1" (uuid 8427cebc-b616-4780-811a-88004c1a5585))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2423,7 +2364,7 @@
     (property "Datasheet" "" (at 217.17 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 41d7ba45-3d68-40f5-8d26-923027f228c3))
+    (pin "1" (uuid af4af2be-11c5-4e17-8727-210c9854bd10))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2448,8 +2389,8 @@
     (property "Datasheet" "~" (at 177.8 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cf9d87f1-8b25-4a22-aebe-fa25c7604633))
-    (pin "2" (uuid e66ec7e5-1282-4dbe-9aa3-9b76ed59fd5e))
+    (pin "1" (uuid fccc10c0-b557-455b-aeec-73b18de08952))
+    (pin "2" (uuid b50a59a0-4ec1-4728-ba33-5f4f9d5a7ccc))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2474,9 +2415,9 @@
     (property "Datasheet" "~" (at 196.215 39.37 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 472ed997-9af5-494c-978b-1d34a4df21b6))
-    (pin "2" (uuid eca80842-b322-46d9-b83f-47bc0fe82deb))
-    (pin "3" (uuid 9daf4538-ac79-44ed-8014-c768873cb2c1))
+    (pin "1" (uuid 9bef27a9-d9be-457e-a130-71b33cc45a00))
+    (pin "2" (uuid 15603850-f7bb-4281-af3e-f771d7cb2c89))
+    (pin "3" (uuid 69a56796-f56a-45b1-8ef7-1029d7964a07))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2501,7 +2442,7 @@
     (property "Datasheet" "" (at 247.015 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8dc06e29-ff1f-481b-8de6-f828f2659ff8))
+    (pin "1" (uuid 14e1b2d8-8212-417b-b99b-1262a6af179b))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2526,7 +2467,7 @@
     (property "Datasheet" "" (at 260.985 57.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 91dd41f6-9b0e-4fee-b3f2-15107f5fbb59))
+    (pin "1" (uuid 0f9614c9-b06b-4fa7-b1d5-2c29defee5f8))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2551,7 +2492,7 @@
     (property "Datasheet" "" (at 132.715 112.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7a0e8f06-d58e-48f2-9821-2807ec433cb7))
+    (pin "1" (uuid 46bd04c4-03c4-4bc3-8ce9-d2d7d3c0e6a1))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2576,7 +2517,7 @@
     (property "Datasheet" "" (at 56.515 161.29 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f07c3dad-c7eb-47b8-b6d5-6466a48546de))
+    (pin "1" (uuid 1f08bc19-d019-4099-853e-16623f9106e2))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2586,49 +2527,13 @@
     )
   )
 
-  (symbol (lib_id "Simulation_SPICE:PMOS") (at 93.98 132.715 0) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 58f87fd1-5527-480d-ab7d-1f53407c41a1)
-    (property "Reference" "Q5" (at 99.695 133.985 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "PMOS" (at 99.695 131.445 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (at 99.06 135.255 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf" (at 93.98 120.015 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "PMOS" (at 93.98 115.57 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Type" "VDMOS" (at 93.98 113.665 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=D 2=G 3=S" (at 93.98 117.475 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 69ba8f90-6622-4d09-83e6-7d7ee889c93b))
-    (pin "2" (uuid e79571dd-7698-4467-97f8-9c754e3621af))
-    (pin "3" (uuid 2c6d29ed-11ef-48f9-a3ed-cd95b838dc28))
-    (instances
-      (project "PCB_Christmas_Tree"
-        (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
-          (reference "Q5") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Device:R") (at 44.45 133.35 90) (mirror x) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid 5b6858b8-e5b6-4d83-9e4c-a31a596970d5)
-    (property "Reference" "R3" (at 43.18 135.89 0)
+    (property "Reference" "Rq1" (at 43.18 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1k" (at 45.72 135.89 0)
+    (property "Value" "10k" (at 45.72 135.89 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 44.45 131.572 90)
@@ -2637,12 +2542,12 @@
     (property "Datasheet" "~" (at 44.45 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5a5ebc22-5c5d-4cbc-b8f3-d50cac723f0b))
-    (pin "2" (uuid a5f9ea08-3a0c-42b6-863e-601347f65c53))
+    (pin "1" (uuid c5d29123-3216-441f-b3d6-09d50779e2de))
+    (pin "2" (uuid 41dd241d-9702-4009-8832-f2cd03b4eebd))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
-          (reference "R3") (unit 1)
+          (reference "Rq1") (unit 1)
         )
       )
     )
@@ -2654,7 +2559,7 @@
     (property "Reference" "R1" (at 41.275 42.545 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "100k" (at 41.275 45.085 0)
+    (property "Value" "10k" (at 41.275 45.085 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 45.593 43.815 90)
@@ -2663,8 +2568,8 @@
     (property "Datasheet" "~" (at 43.815 43.815 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 503fe625-e3b0-4e00-b068-af6e529468bf))
-    (pin "2" (uuid eef8a60a-93d3-48e1-8c96-cb424870bea8))
+    (pin "1" (uuid 5d06324d-4bb5-4b16-aa23-6600124785af))
+    (pin "2" (uuid b68006da-6b63-4a6e-a11c-3e7c8a5c59d3))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2689,8 +2594,8 @@
     (property "Datasheet" "~" (at 256.54 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 97253f7f-ef86-402c-8049-911e047645c1))
-    (pin "2" (uuid e352fea4-49e1-424b-8815-03caa53db103))
+    (pin "1" (uuid b8b6cdd8-ff70-4ae3-8389-f8b023377b9f))
+    (pin "2" (uuid 7a4c7e26-5408-4f71-aa0e-2c3b7b9c2258))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2715,8 +2620,8 @@
     (property "Datasheet" "~" (at 206.375 95.25 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid b692adb4-a5e6-4e5c-902f-6e3cf30eb277))
-    (pin "2" (uuid 8ca81c92-1826-4cdf-9344-f0b4317e6992))
+    (pin "1" (uuid 7a773204-2629-4282-bfbe-982426ee67ee))
+    (pin "2" (uuid f4c9f2d6-b653-4614-83b2-bade2866d3c0))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2741,7 +2646,7 @@
     (property "Datasheet" "" (at 187.96 155.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f7b6355b-315f-4970-a99b-da5c5d39c8c0))
+    (pin "1" (uuid 42596d19-a68d-4768-8110-feaf6ff07acf))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2766,8 +2671,8 @@
     (property "Datasheet" "~" (at 247.015 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 955d4ddc-498b-46eb-b0f2-4be0675e39ef))
-    (pin "2" (uuid 1134ca4c-e2ce-4d1e-888e-275340cb533c))
+    (pin "1" (uuid 69809318-c4c9-4c80-a06d-956294ced135))
+    (pin "2" (uuid 6b97b445-5246-49f3-b55b-822cca0f6607))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2792,7 +2697,7 @@
     (property "Datasheet" "" (at 177.8 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cc53c5c8-eaa6-49ed-99a4-629f8ce9a8e7))
+    (pin "1" (uuid a86bda02-b7b5-4ba8-a63f-dae4d9675fa1))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2817,8 +2722,8 @@
     (property "Datasheet" "~" (at 187.96 150.495 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d0206074-93de-441e-b0d5-b2bcacd1443c))
-    (pin "2" (uuid b14bc31a-3c3a-4138-8bc2-1c3f8f5312b5))
+    (pin "1" (uuid 335f9bae-6fa8-4fcc-afd2-3eb6b46adbaa))
+    (pin "2" (uuid 01f69be6-2949-434a-a57f-9664be364d04))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2843,7 +2748,7 @@
     (property "Datasheet" "" (at 236.855 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5fbf30f3-6b56-4479-9594-1bd17371f431))
+    (pin "1" (uuid a9e6b172-d926-4770-a021-5feb2f34f404))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2868,8 +2773,8 @@
     (property "Datasheet" "~" (at 154.305 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ed6c8127-c53b-4a96-8ee2-dfc4f8b96afa))
-    (pin "2" (uuid fad8f357-03e6-448e-8a14-d5c8995b1503))
+    (pin "1" (uuid 292c308d-c0dd-49d6-a8f8-29e56bb42320))
+    (pin "2" (uuid a2105d7f-eb0a-4782-b231-2123f5e8bee8))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2894,8 +2799,8 @@
     (property "Datasheet" "~" (at 20.32 48.895 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c195afcf-e25d-4aa7-9721-1f8020903e97))
-    (pin "2" (uuid b33a5305-35b1-48f3-8d2b-86b586d710fe))
+    (pin "1" (uuid acd823bf-1da7-48c4-a0a1-eac7f47dc1ec))
+    (pin "2" (uuid 07b89221-f053-462d-93ef-b306b6214d62))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2920,8 +2825,8 @@
     (property "Datasheet" "~" (at 227.33 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c0d65c3d-947a-42d7-bc34-a605d978a2b7))
-    (pin "2" (uuid 4ff9207d-6383-48e7-a25e-defb5dbc9294))
+    (pin "1" (uuid e1792638-5094-4960-88db-a746e9608ee7))
+    (pin "2" (uuid fbac5af9-1cd9-47d7-a674-4debf9d8f051))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2946,8 +2851,8 @@
     (property "Datasheet" "~" (at 166.37 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 83cf06e6-b516-4f59-a757-a575e2469d7a))
-    (pin "2" (uuid 1fa0adec-c694-452e-b037-b125f6a6b1cc))
+    (pin "1" (uuid 081c5749-af70-4c60-bd5c-01db2d2cd41f))
+    (pin "2" (uuid 62cf90c8-7219-46da-8d44-40be151bc4ac))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2972,8 +2877,8 @@
     (property "Datasheet" "~" (at 177.8 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dae2c965-e1ea-4087-ace0-46a8d4182f20))
-    (pin "2" (uuid 23908873-9dc4-432c-a538-fed57c094090))
+    (pin "1" (uuid fd264d62-452a-4622-8d1e-c1330b84dca8))
+    (pin "2" (uuid e8c9889f-d9a6-4260-97ad-3bf713457048))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -2998,7 +2903,7 @@
     (property "Datasheet" "" (at 26.035 36.195 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d2635395-4ccb-4644-ae77-5cc698893363))
+    (pin "1" (uuid 8a3a96e3-70a4-4b9a-8899-baca5e4ea98e))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3023,10 +2928,10 @@
     (property "Datasheet" "~" (at 254 32.385 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a89c147e-c6d7-4883-b33c-bb8f508d58dd))
-    (pin "2" (uuid 7707a8ff-f867-40af-a360-b2912b005354))
-    (pin "3" (uuid 022f1e3d-9455-4634-acfd-741864b9d139))
-    (pin "4" (uuid ed74e3ac-8b46-4a38-8673-7d1f69c1d99c))
+    (pin "1" (uuid 8ae9c070-49a5-4d78-9d85-8b7d2b4a048a))
+    (pin "2" (uuid be761e5b-358f-4380-bff1-2af6dd34c534))
+    (pin "3" (uuid d412493d-f3e9-4b66-b40a-e8489f569b52))
+    (pin "4" (uuid ef91e1b2-cf2b-4b38-9eb4-9ed4deeaf873))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3051,7 +2956,7 @@
     (property "Datasheet" "" (at 166.37 156.21 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 83bc6c97-9902-4361-a473-62eebd78305c))
+    (pin "1" (uuid 0673845f-cf43-45e7-9100-a7ab663c870c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3076,8 +2981,8 @@
     (property "Datasheet" "~" (at 133.35 140.335 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1fe4ee74-a8e3-4e8d-bb4b-198404423506))
-    (pin "2" (uuid 88b5aa52-4ee2-47a8-a2bb-743185e4a155))
+    (pin "1" (uuid a648aa66-35b0-4345-8895-433ebf31a9e8))
+    (pin "2" (uuid a85cdae5-4cbe-4d13-a02f-d1d59439f980))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3102,7 +3007,7 @@
     (property "Datasheet" "" (at 68.58 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 60f2c1e2-8590-43e5-9a0a-5f0fc082c9c3))
+    (pin "1" (uuid 27f5de16-79dd-4e91-98d5-9c82908a00bd))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3127,8 +3032,8 @@
     (property "Datasheet" "~" (at 154.305 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 848e0df6-5ec3-445f-9841-928e7a2b9515))
-    (pin "2" (uuid cbe31b6a-58c5-4629-8df2-8d92e5626438))
+    (pin "1" (uuid 27679b3f-895a-4eab-b1d1-47c182a27bd1))
+    (pin "2" (uuid 75e83353-03d8-417d-a398-14b026fd4c06))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3153,8 +3058,8 @@
     (property "Datasheet" "~" (at 227.33 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 04c34c93-6774-4c5e-a0c4-1c8286b9ee2e))
-    (pin "2" (uuid d4723eef-2f7f-4fcc-b785-bb3757aeebdc))
+    (pin "1" (uuid 1f7d776e-deff-4860-8415-63abbf7fc015))
+    (pin "2" (uuid 6dca1aee-8a07-410f-af04-ef842b2af901))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3179,8 +3084,8 @@
     (property "Datasheet" "~" (at 256.54 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 85d2c2f0-cae4-468e-a1f3-1379ef245b2b))
-    (pin "2" (uuid 6cf4d799-7a49-4d5d-a90f-a9f218098f97))
+    (pin "1" (uuid beddc3c0-0484-4641-acc6-2b6d81a61fff))
+    (pin "2" (uuid d43bd6a3-f471-420a-90e5-1b91e1889808))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3205,8 +3110,8 @@
     (property "Datasheet" "~" (at 177.8 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f5318bae-412a-4568-9bb4-94f397c49f05))
-    (pin "2" (uuid ef386753-1313-446f-861f-d55d9c00eea7))
+    (pin "1" (uuid f9da6b50-6a69-4b6d-95f8-b4b60c7253f6))
+    (pin "2" (uuid c4324447-8146-4e77-ab05-67f0e116ad28))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3231,8 +3136,8 @@
     (property "Datasheet" "~" (at 166.37 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3e2c70bd-54ff-40d8-b0c0-f61e83eb8c06))
-    (pin "2" (uuid bc6be23f-1740-40d1-b100-1940593dd0d8))
+    (pin "1" (uuid 374accb6-12a4-480e-a825-93061e3a621f))
+    (pin "2" (uuid 375f6ed5-eb56-49e4-bd51-a70096f1ab44))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3257,7 +3162,7 @@
     (property "Datasheet" "" (at 201.295 41.91 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7a8c86f1-8117-4bd4-9c3d-f020ecc4e6b5))
+    (pin "1" (uuid 955a47f0-6aa3-447c-86a8-c3a4a75b1899))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3282,8 +3187,8 @@
     (property "Datasheet" "~" (at 206.375 105.41 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 70a556e9-97d8-4317-ab5f-a98924cbcf15))
-    (pin "2" (uuid cf345b28-0d1d-4176-9849-324f90110041))
+    (pin "1" (uuid 82069476-5360-4c86-95af-1ca22412da14))
+    (pin "2" (uuid 5362f82e-e8a8-4ea2-a788-28634df2119b))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3308,8 +3213,8 @@
     (property "Datasheet" "~" (at 247.015 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f09941b6-3665-4633-a260-009128942a24))
-    (pin "2" (uuid 3ca9335f-d2bf-427a-8144-5c09f64e87bd))
+    (pin "1" (uuid 64ea3029-c75c-4704-b9b2-20edf800d635))
+    (pin "2" (uuid b66553d0-00ee-453f-86f5-85c944fda379))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3334,8 +3239,8 @@
     (property "Datasheet" "~" (at 217.17 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 09bb32ad-2236-4cc7-aab6-bf884750ac3a))
-    (pin "2" (uuid da906725-3eb0-40ff-a7a9-75580f6a0914))
+    (pin "1" (uuid 6a4182a8-be53-410b-a9e5-4efb2792187d))
+    (pin "2" (uuid 576b6507-11e2-4f15-b55d-ff3492468bf2))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3360,7 +3265,7 @@
     (property "Datasheet" "" (at 53.34 88.265 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 7412b7d8-7d82-4061-bc73-020bc21a901c))
+    (pin "1" (uuid 413018a2-0d8c-4111-a9f5-83b07321ec94))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3385,10 +3290,10 @@
     (property "Datasheet" "~" (at 228.6 33.02 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a4ee1d39-1b2a-4d6b-ae48-ea1e79210d1a))
-    (pin "2" (uuid a87d224d-6026-46c8-928b-60da804a903a))
-    (pin "3" (uuid 600658f2-23d3-45ae-8b73-67cda908c78f))
-    (pin "4" (uuid 224d9771-94c5-4e03-acd3-02b70089a89a))
+    (pin "1" (uuid a70d2193-be9f-49e4-a0c6-2ee20099c6e3))
+    (pin "2" (uuid fb3de276-464a-4549-9c1d-0b8549020e23))
+    (pin "3" (uuid 4567dc12-852c-427d-8942-330d6d26d824))
+    (pin "4" (uuid 3d66e373-eff5-4747-9837-7bf996494410))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3413,14 +3318,14 @@
     (property "Datasheet" "http://ww1.microchip.com/downloads/en/DeviceDoc/ATtiny202-402-AVR-MCU-with-Core-Independent-Peripherals_and-picoPower-40001969A.pdf" (at 124.46 49.53 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid db7101e4-01d2-4f92-b7b3-59a2059e8c48))
-    (pin "2" (uuid 9a23fc31-1c26-4615-a414-86b903a63b9e))
-    (pin "3" (uuid e9c238e8-da53-4f9f-94d0-b594cf9bed17))
-    (pin "4" (uuid 7fcf4806-878d-46f8-b66e-c2e188edfaa3))
-    (pin "5" (uuid 76e3afe5-f2e6-4f9f-8424-1b4cde40670e))
-    (pin "6" (uuid 4696bd56-cad4-42cc-afdc-2efb95b3a2f3))
-    (pin "7" (uuid 173baaa2-a6fd-4d1e-8532-3a9e19b26901))
-    (pin "8" (uuid ec9f10bf-f067-43a7-88ce-7b1e99caea64))
+    (pin "1" (uuid b597b862-5b48-48e3-8033-94739ebb637d))
+    (pin "2" (uuid 712adeb9-f7a0-4f23-a2b5-c296f2f0d65d))
+    (pin "3" (uuid d4c855b0-b400-447d-bd67-8832d547ef66))
+    (pin "4" (uuid 7b920602-48a1-4257-a147-55b4a5666bd7))
+    (pin "5" (uuid 4065e66e-cf19-48cf-962e-d18ad117227e))
+    (pin "6" (uuid f4861349-0460-42bc-b8c2-ac0adc8fb854))
+    (pin "7" (uuid 6f18ad49-aa10-4cd6-af08-16509ff4c0ff))
+    (pin "8" (uuid 4bcfd8b9-cc2c-4b58-9f7e-ff23fa064958))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3445,7 +3350,7 @@
     (property "Datasheet" "" (at 133.35 155.575 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 45938825-873b-4154-addf-272604ad3aa3))
+    (pin "1" (uuid 09ec5403-c9bc-48f3-a761-57a8e19ed59a))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3470,8 +3375,8 @@
     (property "Datasheet" "~" (at 236.855 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 22158bb2-cc0c-480b-823c-f055a5d52a03))
-    (pin "2" (uuid 800fd7de-8d33-4b23-834a-a4f99d9f2a20))
+    (pin "1" (uuid 4e3d71dd-fac5-4eee-a6fb-292d73f7e340))
+    (pin "2" (uuid 38a610f1-82b4-41b0-bf9d-29b211b010ab))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3496,8 +3401,8 @@
     (property "Datasheet" "https://omronfs.omron.com/en_US/ecb/products/pdf/en-b3fs.pdf" (at 62.23 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f7ca0009-39c5-4580-a796-1b856b4be5c7))
-    (pin "2" (uuid 62b27a67-d017-407b-bf90-3f502d089c27))
+    (pin "1" (uuid 96c54850-07ff-4b0b-8e45-729d2dd6ee3a))
+    (pin "2" (uuid bd1020bc-d119-4319-b29f-00546e5419f1))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3522,7 +3427,7 @@
     (property "Datasheet" "" (at 227.33 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e516b0f7-9a1d-414c-b598-1ea44de0672c))
+    (pin "1" (uuid 675fe301-3c1f-4997-8724-277285f1f0ae))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3547,8 +3452,8 @@
     (property "Datasheet" "~" (at 133.35 150.495 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 16f58e07-4d11-4af0-8a76-873cdfe53ad6))
-    (pin "2" (uuid c01a9daf-d79a-49ee-a90e-9bb82c8e6c12))
+    (pin "1" (uuid 3654c7e3-7006-449c-b627-24b0cd2140fb))
+    (pin "2" (uuid cebb8639-e3eb-4a69-b64c-ecd43351494e))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3573,7 +3478,7 @@
     (property "Datasheet" "" (at 154.305 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3643060f-16d5-44db-be50-348d20d40720))
+    (pin "1" (uuid d4ae9341-a14e-4a27-a095-db0826863483))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3598,7 +3503,7 @@
     (property "Datasheet" "" (at 26.035 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid dbe9024f-2e42-411c-9bde-be8b3788ac84))
+    (pin "1" (uuid 92f42e30-a042-45ef-aa4f-630121c5ba40))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3614,7 +3519,7 @@
     (property "Reference" "R2" (at 42.545 172.085 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1k" (at 45.085 172.085 0)
+    (property "Value" "10k" (at 45.085 172.085 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 43.815 167.767 90)
@@ -3623,8 +3528,8 @@
     (property "Datasheet" "~" (at 43.815 169.545 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fc7733bc-2b45-410f-9f2b-322fb3a060a8))
-    (pin "2" (uuid f2d20b4b-92c6-4d5c-8e32-d868f4683ebc))
+    (pin "1" (uuid 2e64cfa9-f263-4d36-9526-68edd360957a))
+    (pin "2" (uuid f7e8e372-201c-494e-9079-ac2f32632923))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3649,48 +3554,12 @@
     (property "Datasheet" "~" (at 144.78 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid df724e7e-0000-48a7-bb55-88cd3325233b))
-    (pin "2" (uuid 0c266cbb-679b-413c-a65f-df9dee0aeac0))
+    (pin "1" (uuid 10c4b0c5-9da9-4d0d-974a-700b1114e07c))
+    (pin "2" (uuid d3ab85fd-4590-4763-aebe-5dfeed18020e))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
           (reference "D21") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Simulation_SPICE:PMOS") (at 53.34 40.64 270) (mirror x) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid b5207657-a421-4c8b-8e5c-25f3ed0f4bf4)
-    (property "Reference" "Q1" (at 53.34 31.115 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "PMOS" (at 53.34 33.655 90)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-323_SC-70_Handsoldering" (at 55.88 35.56 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://ngspice.sourceforge.io/docs/ngspice-manual.pdf" (at 40.64 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Device" "PMOS" (at 36.195 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Type" "VDMOS" (at 34.29 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=D 2=G 3=S" (at 38.1 40.64 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 82c3fb63-4dbc-4349-83e2-7721cb60b254))
-    (pin "2" (uuid 7cf886cd-4047-4540-9b26-1805bc206b33))
-    (pin "3" (uuid 846308a1-7d19-4955-82ef-b765749f591d))
-    (instances
-      (project "PCB_Christmas_Tree"
-        (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
-          (reference "Q1") (unit 1)
         )
       )
     )
@@ -3711,7 +3580,7 @@
     (property "Datasheet" "" (at 259.08 37.465 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aa966752-5503-4b8b-9857-b18a4f5dc51a))
+    (pin "1" (uuid 0f29936f-68b1-43d2-8a99-576d71a8d186))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3736,8 +3605,8 @@
     (property "Datasheet" "~" (at 154.305 140.97 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f76de843-9e83-4103-bd6f-31d0339de504))
-    (pin "2" (uuid 333f3e0d-604a-4f4c-aab3-515ebba84835))
+    (pin "1" (uuid a5bc8b40-6423-4329-8330-30a262938a9e))
+    (pin "2" (uuid 29ced7d0-c0ac-441f-a3b0-e48256a1594c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3762,7 +3631,7 @@
     (property "Datasheet" "" (at 256.54 154.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0f94e62a-dfeb-40d8-a19a-1cdb37defb37))
+    (pin "1" (uuid 699aecd7-338e-4787-b476-0dbf3af279ce))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3787,12 +3656,39 @@
     (property "Datasheet" "~" (at 166.37 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d9df368e-dce2-49c5-9f31-85069992d15d))
-    (pin "2" (uuid b4d00bee-e1e8-4b0b-bf54-f0da2e9e5066))
+    (pin "1" (uuid bef207b6-6651-4bee-a79a-22aacd0d496e))
+    (pin "2" (uuid a3947719-03e5-4e97-af46-aa7e07f4a83c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
           (reference "R9") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_FET:AO3401A") (at 93.98 132.715 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid bb0fe42b-627e-4310-9945-23e3159ac39a)
+    (property "Reference" "Q5" (at 102.87 132.715 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "AO3401A" (at 100.33 132.715 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 99.06 130.81 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 93.98 132.715 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (pin "1" (uuid 5abe96a2-5c51-448f-99be-6403e8648f95))
+    (pin "2" (uuid 748e31b8-7ef3-46f7-9651-87cf36c435f9))
+    (pin "3" (uuid 78a01bb0-467e-4fa7-a574-c300b942b52f))
+    (instances
+      (project "PCB_Christmas_Tree"
+        (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
+          (reference "Q5") (unit 1)
         )
       )
     )
@@ -3813,8 +3709,8 @@
     (property "Datasheet" "~" (at 217.17 139.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2a29f3d3-aecd-47d2-8e92-61cd94794c5d))
-    (pin "2" (uuid 12469fd2-e0fc-4bb5-bf22-e9be80cd5997))
+    (pin "1" (uuid a828ca42-5ce5-47a1-8b9a-3a3ec6f16b39))
+    (pin "2" (uuid be66a888-684c-46ed-b9eb-69bd34c929b4))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3839,8 +3735,8 @@
     (property "Datasheet" "~" (at 247.015 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cddb2255-e849-4596-9711-7c97090d489c))
-    (pin "2" (uuid 7a332140-8578-464e-ac2e-5858febeb513))
+    (pin "1" (uuid 67a4ffd3-fffd-4be0-a30d-639e2478bfdf))
+    (pin "2" (uuid 0bcf9f9d-42ca-452d-bed4-a2698bf47a67))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3865,8 +3761,8 @@
     (property "Datasheet" "~" (at 247.015 139.065 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fdfec414-f182-423a-87fa-f1c8f7ee4ea2))
-    (pin "2" (uuid 1ab2b61e-e1c4-4f56-855a-033d55ac3012))
+    (pin "1" (uuid baea0a68-a6b3-41cf-923d-e89dedcb7b91))
+    (pin "2" (uuid 148f66e7-c74e-4587-bacd-1a84ff6444b3))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3891,7 +3787,7 @@
     (property "Datasheet" "" (at 227.33 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fc279274-caf2-4f4f-9d81-c34c44e4787c))
+    (pin "1" (uuid eb7d77a8-c918-4c00-acd0-d5fa322f8a95))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3916,8 +3812,8 @@
     (property "Datasheet" "~" (at 144.78 151.13 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e39cdb03-1749-4c22-8981-a9a1ca450227))
-    (pin "2" (uuid 80f320e7-0ce6-4c77-83ec-c36dc4aa6963))
+    (pin "1" (uuid 09b5b9f7-d260-4d83-a5a0-7a6f3c889abb))
+    (pin "2" (uuid 8eaffa5a-5dff-4eaf-be48-54cc2e7b316f))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3942,8 +3838,8 @@
     (property "Datasheet" "~" (at 144.145 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4ef2dd44-4a8c-44e9-b2d3-8535e5f46ab0))
-    (pin "2" (uuid 29b98fef-82ae-43cc-b9ea-b7c71fc9e4b4))
+    (pin "1" (uuid f9ee1e69-3b81-4996-b41c-4889f5dc500a))
+    (pin "2" (uuid f2e1ac57-d86a-4032-85e2-f97369f4af0c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3968,10 +3864,10 @@
     (property "Datasheet" "~" (at 229.87 51.435 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ffd7ca05-921b-4c58-bae0-382758132dc5))
-    (pin "2" (uuid f8ffb030-05d6-4e60-b23f-5c21dbbfde4f))
-    (pin "3" (uuid 88c176c1-f6cb-4f13-be88-0580e76b6a17))
-    (pin "4" (uuid 90d88ba8-2b3a-4bae-84ab-0e0a4236406c))
+    (pin "1" (uuid 31c512a8-62ea-4c52-9c1f-2841bb47a098))
+    (pin "2" (uuid e99fe5af-4677-402b-90ef-43517b5c5822))
+    (pin "3" (uuid e684e174-9fe2-41f6-bd69-ba6081379809))
+    (pin "4" (uuid 655c938a-6654-4053-a88c-e70683aefc1d))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -3996,7 +3892,7 @@
     (property "Datasheet" "" (at 234.95 56.515 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a9fe8426-c991-431f-8cc5-3f3a056a8980))
+    (pin "1" (uuid 29bd38e5-5813-418e-9d8d-e9040d097d59))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4021,8 +3917,8 @@
     (property "Datasheet" "~" (at 236.855 104.775 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid cecbae44-44a6-4706-9377-5c9e6f86ebf5))
-    (pin "2" (uuid b38acdac-d327-458d-814c-90d321935814))
+    (pin "1" (uuid 3f6bf90f-df44-4188-a5d7-3e6d65d6d507))
+    (pin "2" (uuid dd2fefb0-daee-4cfd-870d-8c184a0308e9))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4047,7 +3943,7 @@
     (property "Datasheet" "" (at 256.54 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fbe131e8-0aa2-4c8a-bb5a-051998d6824f))
+    (pin "1" (uuid dff1367c-c7ef-4a40-9af8-84abf3dfdcbe))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4072,12 +3968,39 @@
     (property "Datasheet" "~" (at 132.715 97.155 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8ff7d77a-5a8a-4c65-8447-c3a1ab8bcf58))
-    (pin "2" (uuid 4b4ba877-8386-47f9-b6d0-96295415bf43))
+    (pin "1" (uuid 407913dc-6916-4f51-9167-50b62ffc8a68))
+    (pin "2" (uuid f95d7d52-7e9e-46e0-88f2-681ec6ee7a02))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
           (reference "D22") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Transistor_FET:AO3401A") (at 53.34 40.64 270) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid da9cf11b-64f4-45ea-8a19-172d03747604)
+    (property "Reference" "Q1" (at 53.34 31.75 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "AO3401A" (at 53.34 34.29 90)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 51.435 35.56 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
+    )
+    (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 53.34 40.64 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+    (pin "1" (uuid 5adc35e9-f37b-4b62-a338-e2cf9520bd4f))
+    (pin "2" (uuid 61d1867d-0cd2-4313-8929-5f9d774a44ef))
+    (pin "3" (uuid 6ac5d592-ccdb-4147-a52b-ce628bb0c3f5))
+    (instances
+      (project "PCB_Christmas_Tree"
+        (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
+          (reference "Q1") (unit 1)
         )
       )
     )
@@ -4098,7 +4021,7 @@
     (property "Datasheet" "" (at 247.015 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e7f0efb8-c631-4649-8965-3899a49cfa4a))
+    (pin "1" (uuid 7096b364-a731-4eb9-acf9-53eb6335d3c7))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4123,7 +4046,7 @@
     (property "Datasheet" "" (at 124.46 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4fc6bc6f-7ae3-4fa1-9be3-1ca525f68ff3))
+    (pin "1" (uuid 94a0a2d4-6a6e-45ea-8c24-4dc6c76d95a8))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4133,37 +4056,28 @@
     )
   )
 
-  (symbol (lib_id "Simulation_SPICE:NPN") (at 55.88 81.28 0) (mirror y) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid ddf4b50d-6a44-4498-b7e2-4ea76826f482)
-    (property "Reference" "Q4" (at 50.165 80.01 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+  (symbol (lib_id "Transistor_FET:AO3401A") (at 54.61 133.35 0) (mirror x) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no)
+    (uuid de9eca0a-0ee7-4494-bba8-d427b8b450f0)
+    (property "Reference" "Q3" (at 63.5 133.35 90)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "NPN" (at 50.165 82.55 0)
-      (effects (font (size 1.27 1.27)) (justify left))
+    (property "Value" "AO3401A" (at 60.96 133.35 90)
+      (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at -7.62 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 59.69 131.445 0)
+      (effects (font (size 1.27 1.27) italic) (justify left) hide)
     )
-    (property "Datasheet" "~" (at -7.62 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
+    (property "Datasheet" "http://www.aosmd.com/pdfs/datasheet/AO3401A.pdf" (at 54.61 133.35 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Sim.Device" "NPN" (at 55.88 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Type" "GUMMELPOON" (at 55.88 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Sim.Pins" "1=C 2=B 3=E" (at 55.88 81.28 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 529db89e-0e99-4e8c-ad15-edbb5db4d402))
-    (pin "2" (uuid 939777bb-c043-4940-ba59-6b6b124edd54))
-    (pin "3" (uuid 1dca85e5-6bc1-4444-a272-ee24a0588e7c))
+    (pin "1" (uuid 06137a8c-3575-4474-94e1-2776fd8e78e4))
+    (pin "2" (uuid 9bae6480-0b6f-4c08-81df-c84f881d1f98))
+    (pin "3" (uuid 5cf01651-ce90-48b6-9346-f66326f48df3))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
-          (reference "Q4") (unit 1)
+          (reference "Q3") (unit 1)
         )
       )
     )
@@ -4184,7 +4098,7 @@
     (property "Datasheet" "" (at 166.37 111.76 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fd439b5d-4eb7-44e8-933d-4b898b3bd4df))
+    (pin "1" (uuid 6b81a541-e2a9-444e-aea0-1719c52ebb57))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4209,8 +4123,8 @@
     (property "Datasheet" "~" (at 187.96 106.045 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid adc748eb-7568-4853-8d30-f3113d5db588))
-    (pin "2" (uuid 115cc24c-9921-4759-b9a3-cddeb39dd566))
+    (pin "1" (uuid 717bc3e1-5f0d-4c87-9e0d-4fd9a5cb87ff))
+    (pin "2" (uuid f884704b-b42f-43b5-940b-19aabb32decd))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4235,7 +4149,7 @@
     (property "Datasheet" "" (at 206.375 154.94 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 542a6a0f-f67a-4125-ad6e-9672429375f1))
+    (pin "1" (uuid 4029242e-0e17-4d16-8e4b-1278ae1ee1fa))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4260,8 +4174,8 @@
     (property "Datasheet" "~" (at 144.145 96.52 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 61ceaf35-07e2-4e60-bddd-10c92db6fae5))
-    (pin "2" (uuid ff6414ea-2068-4273-8797-3eb901862f71))
+    (pin "1" (uuid 1d2dabee-d24e-4123-8172-a7597da94a4e))
+    (pin "2" (uuid d5e9fe0b-cd02-46ee-94af-6603252aba2e))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4286,8 +4200,8 @@
     (property "Datasheet" "~" (at 217.17 94.615 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 22a5a096-4841-4505-82af-1799a8dcc349))
-    (pin "2" (uuid 2f98db0d-18c9-4458-bf0d-7868620ccd9c))
+    (pin "1" (uuid a74bef96-1950-48c6-80bc-79e081c61c34))
+    (pin "2" (uuid 94ab3ca8-ea8f-412a-a511-e01fecd7d8c0))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4312,8 +4226,8 @@
     (property "Datasheet" "~" (at 227.33 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9e458356-88fc-43d5-ac5b-1e50fb67f176))
-    (pin "2" (uuid f8dfb439-e2dd-4e82-91ae-2409d2a0551b))
+    (pin "1" (uuid 50926980-1a3f-4508-9995-1f9193087749))
+    (pin "2" (uuid 6825e23d-7649-4d0f-b797-5f4102ce5a2c))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4329,7 +4243,7 @@
     (property "Reference" "R5" (at 82.55 135.255 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "1k" (at 85.09 135.255 0)
+    (property "Value" "10k" (at 85.09 135.255 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder" (at 83.82 130.937 90)
@@ -4338,8 +4252,8 @@
     (property "Datasheet" "~" (at 83.82 132.715 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3b21960b-9730-4d2e-8168-20ce8db5c4b3))
-    (pin "2" (uuid c47528f3-1cf8-4eea-8886-ae4e791dca74))
+    (pin "1" (uuid cbff60b1-6e07-4e97-a04c-14e9946698e5))
+    (pin "2" (uuid 7656f4f2-fc1c-40d6-a95d-1516988640a2))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4364,8 +4278,8 @@
     (property "Datasheet" "~" (at 154.305 106.68 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 99424b11-4248-4805-b298-45ef7f21b623))
-    (pin "2" (uuid 61e2f0c1-c507-48a8-ad82-ba40808541cb))
+    (pin "1" (uuid d1a65aa3-7e1f-44f7-b723-91b84984d9e8))
+    (pin "2" (uuid f71deb1f-0f36-4319-b37d-f550633bad7d))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4390,7 +4304,7 @@
     (property "Datasheet" "" (at 201.295 36.83 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 21a1b95c-40bc-42ee-8b26-e6ee8d21919e))
+    (pin "1" (uuid a727d908-e065-453f-ab79-9ac3c787d9fc))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4415,8 +4329,8 @@
     (property "Datasheet" "~" (at 132.715 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 958b55ba-8ea0-4081-ba56-9391362e348a))
-    (pin "2" (uuid 030c37ce-bbfb-4528-a714-e0dd4c63c07f))
+    (pin "1" (uuid f409251c-9dcd-4408-94a0-90aab8d60ca7))
+    (pin "2" (uuid 53696b9c-e2f2-4328-9ca2-977fbda95a7b))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4441,8 +4355,8 @@
     (property "Datasheet" "~" (at 73.025 81.28 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fcb5a055-93fa-47c3-a123-906c38e4aa3e))
-    (pin "2" (uuid 72d209b8-2afe-409d-b65d-98f110db32a9))
+    (pin "1" (uuid aeaab9b9-143f-4c00-800f-4238a90357b1))
+    (pin "2" (uuid 6dee9cd0-2805-4350-b9e0-d98151eda673))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4467,7 +4381,7 @@
     (property "Datasheet" "" (at 206.375 110.49 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0c55bb88-9989-458d-9815-6b72fbe38f1a))
+    (pin "1" (uuid fe601273-6e35-4920-b7e2-65df45f334ff))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4492,7 +4406,7 @@
     (property "Datasheet" "" (at 233.68 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 22133c6a-c9d7-445a-9ee4-f8d44603231d))
+    (pin "1" (uuid 4e6d2662-5ce9-46b0-9d60-3fb6059af4f8))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
@@ -4517,8 +4431,8 @@
     (property "Datasheet" "~" (at 206.375 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 91c49c22-581c-4e2c-ab99-45aebe5cf57b))
-    (pin "2" (uuid 180a945c-eddf-44a4-934f-50616bf2ac27))
+    (pin "1" (uuid 0594d180-6187-4624-a5c0-c61fcf8891bd))
+    (pin "2" (uuid 108a222f-f25a-4c7e-b150-b6fd09be707f))
     (instances
       (project "PCB_Christmas_Tree"
         (path "/e614f44a-b3b4-458d-ace1-aabdd8a54d37"
