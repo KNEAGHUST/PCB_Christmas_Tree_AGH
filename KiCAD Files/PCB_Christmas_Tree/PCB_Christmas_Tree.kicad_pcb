@@ -1461,7 +1461,7 @@
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp c741e753-5b52-40ed-95b4-42a8138f2423)
     )
-    (fp_text user "${REFERENCE}" (at 44.714 77.802 -90 unlocked) (layer "F.Fab")
+    (fp_text user "${REFERENCE}" (at 5.966 -1.121 -90 unlocked) (layer "F.Fab")
         (effects (font (size 1 1) (thickness 0.15)))
       (tstamp 6b0fc04f-54a0-4954-be64-3e991e6fa8cf)
     )
