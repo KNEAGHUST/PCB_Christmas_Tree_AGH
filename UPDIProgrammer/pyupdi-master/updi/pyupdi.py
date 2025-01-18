@@ -7,6 +7,7 @@ import argparse
 import re
 import logging
 
+#import device
 from device.device import Device
 from updi.nvm import UpdiNvmProgrammer
 """
